@@ -3,11 +3,13 @@ import './App.css';
 import reqPixabay from '../services/api';
 
 import Searchbar from './Searchbar/Searchbar';
+import ImageGallery from './ImageGallery/ImageGallery';
 
 interface Image {
-  id: string;
+  id: number;
   webformatURL: string;
   largeImageURL: string;
+  [key: string]: string | number;
 }
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
     async function reqApi() {
       const { hits } = await reqPixabay(query);
 
-      console.log(hits);
+      setImages(prev => [...prev, ...hits]);
     }
 
     reqApi();
@@ -39,6 +41,7 @@ function App() {
   return (
     <div className="App">
       <Searchbar onSubmit={onSubmit} />
+      {images.length > 0 && <ImageGallery images={images} />}
     </div>
   );
 }
