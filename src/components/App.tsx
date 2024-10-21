@@ -1,16 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import reqPixabay from '../services/api';
+import Image from '../interfaces/Image.interface';
 
 import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
-
-interface Image {
-  id: number;
-  webformatURL: string;
-  largeImageURL: string;
-  [key: string]: string | number;
-}
 
 function App() {
   const [images, setImages] = useState<Image[]>([]);
@@ -30,8 +24,6 @@ function App() {
     }
 
     reqApi();
-
-    // setImages(prev => [...prev, reqPixabay(query)]);
   }, [query]);
 
   const onSubmit = (q: string) => {

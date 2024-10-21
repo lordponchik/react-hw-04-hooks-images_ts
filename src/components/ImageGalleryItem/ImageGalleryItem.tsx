@@ -1,9 +1,4 @@
-interface Image {
-  id: number;
-  webformatURL: string;
-  largeImageURL: string;
-  [key: string]: string | number;
-}
+import Image from '../../interfaces/Image.interface';
 
 interface Props {
   image: Image;
