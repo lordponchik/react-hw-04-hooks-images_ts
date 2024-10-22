@@ -1,4 +1,5 @@
 import Image from '../../interfaces/Image.interface';
+import s from './ImageGalleryItem.module.css';
 
 interface Props {
   image: Image;
@@ -6,7 +7,7 @@ interface Props {
 
 export default function ImageGalleryItem({ image: { id, webformatURL, largeImageURL } }: Props) {
   return (
-    <li className="gallery-item">
+    <li className={s.gallery__item}>
       <img src={webformatURL} alt="" />
     </li>
   );
