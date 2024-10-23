@@ -9,8 +9,8 @@ interface Props {
 export default function ImageGallery({ images }: Props) {
   return (
     <ul className={s.gallery}>
-      {images.map(image => {
-        return <ImageGalleryItem key={`${image.id}`} image={image} />;
+      {images.map((image, id) => {
+        return <ImageGalleryItem key={`${image.id}_${id}`} image={image} />;
       })}
     </ul>
   );
