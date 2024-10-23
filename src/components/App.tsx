@@ -35,7 +35,10 @@ function App() {
   }, [query, page]);
 
   const onSubmit = (q: string) => {
-    setQuery(q);
+    if (query !== q) {
+      setImages([]);
+      setQuery(q);
+    }
   };
 
   const nextPage = () => {
