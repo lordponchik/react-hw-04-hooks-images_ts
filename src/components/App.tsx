@@ -49,7 +49,7 @@ function App() {
     <div className="App">
       <Searchbar onSubmit={onSubmit} />
       {images.length > 0 && <ImageGallery images={images} />}
-      {<Button title="Load More" onClick={nextPage} />}
+      {images.length > 0 && <Button title="Load More" onClick={nextPage} />}
     </div>
   );
 }
