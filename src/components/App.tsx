@@ -6,12 +6,14 @@ import Image from '../interfaces/Image.interface';
 import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 import Button from './Button/Button';
+import Loader from './Loader/Loader';
 
 function App() {
   const [images, setImages] = useState<Image[]>([]);
   const [query, setQuery] = useState<string>('');
   const [page, setPage] = useState<number>(1);
   const [loadMore, setLoadMore] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const isFirstRender = useRef(true);
 
   useEffect(() => {
@@ -21,12 +23,15 @@ function App() {
     }
 
     async function reqApi() {
+      setIsLoading(true);
+
       try {
         const { hits } = await reqPixabay(query, page);
 
         setImages(prev => [...prev, ...hits]);
       } catch (error) {
       } finally {
+        setIsLoading(false);
         setLoadMore(true);
       }
     }
@@ -50,6 +55,7 @@ function App() {
       <Searchbar onSubmit={onSubmit} />
       {images.length > 0 && <ImageGallery images={images} />}
       {images.length > 0 && <Button title="Load More" onClick={nextPage} />}
+      {isLoading && <Loader />}
     </div>
   );
 }
