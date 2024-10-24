@@ -1,0 +1,26 @@
+.searchbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: rgb(40, 130, 255);
+}
+
+.button {
+  padding: 5px 10px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  border-style: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: rgb(124, 176, 250);
+}
+
+.input {
+  width: 200px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-style: none;
+}

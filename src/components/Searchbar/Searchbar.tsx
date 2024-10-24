@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import s from './Searchbar.module.css';
 
 interface Props {
   onSubmit: (q: string) => void;
@@ -20,14 +21,14 @@ export default function Searchbar({ onSubmit }: Props) {
   };
 
   return (
-    <header className="searchbar">
+    <header className={s.searchbar}>
       <form className="form" onSubmit={onSubmitForm}>
-        <button type="submit" className="button">
+        <button type="submit" className={s.button}>
           <span className="button-label">Search</span>
         </button>
 
         <input
-          className="input"
+          className={s.input}
           type="text"
           autoComplete="off"
           autoFocus

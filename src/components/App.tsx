@@ -12,7 +12,7 @@ function App() {
   const [images, setImages] = useState<Image[]>([]);
   const [query, setQuery] = useState<string>('');
   const [page, setPage] = useState<number>(1);
-  const [perPage, setPerPage] = useState<number>(200);
+  const [perPage, setPerPage] = useState<number>(12);
   const [total, setTotal] = useState<number>(0);
   const [loadMore, setLoadMore] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
