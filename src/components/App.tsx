@@ -71,8 +71,8 @@ function App() {
     <div className="App">
       <Searchbar onSubmit={onSubmit} />
       {images.length > 0 && <ImageGallery images={images} />}
-      {total > 0 && <Button title="Load More" onClick={nextPage} />}
       {isLoading && <Loader />}
+      {total > 0 && <Button title="Load More" onClick={nextPage} />}
     </div>
   );
 }
