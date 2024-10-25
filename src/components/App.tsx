@@ -7,6 +7,7 @@ import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 import Button from './Button/Button';
 import Loader from './Loader/Loader';
+import Modal from './Modal/Modal';
 
 function App() {
   const [images, setImages] = useState<Image[]>([]);
@@ -17,6 +18,7 @@ function App() {
   const [loadMore, setLoadMore] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const isFirstRender = useRef(true);
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
 
   useEffect(() => {
     if (isFirstRender.current) {
@@ -67,12 +69,17 @@ function App() {
     setPage(prev => prev + 1);
   };
 
+  const toggleModal = () => {
+    setIsOpenModal(isOpenModal => !isOpenModal);
+  };
+
   return (
     <div className="App">
       <Searchbar onSubmit={onSubmit} />
-      {images.length > 0 && <ImageGallery images={images} />}
+      {images.length > 0 && <ImageGallery images={images} toggleModal={toggleModal} />}
       {isLoading && <Loader />}
       {total > 0 && <Button title="Load More" onClick={nextPage} />}
+      {isOpenModal && <Modal />}
     </div>
   );
 }
