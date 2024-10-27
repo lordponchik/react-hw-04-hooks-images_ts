@@ -74,6 +74,8 @@ function App() {
   const toggleModal = (data?: string) => {
     setIsOpenModal(isOpenModal => !isOpenModal);
     setModalData(data || '');
+
+    window.document.body.classList.toggle('no-scroll');
   };
 
   return (
