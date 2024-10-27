@@ -83,7 +83,7 @@ function App() {
       {isLoading && <Loader />}
       {total > 0 && <Button title="Load More" onClick={nextPage} />}
       {isOpenModal && (
-        <Modal>
+        <Modal toggleModal={toggleModal}>
           <ImageModal data={modalData} />
         </Modal>
       )}
