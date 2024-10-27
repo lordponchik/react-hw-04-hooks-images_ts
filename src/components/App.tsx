@@ -90,7 +90,9 @@ function App() {
   return (
     <div className="App">
       <Searchbar onSubmit={onSubmit} />
-      {images.length > 0 && <ImageGallery images={images} toggleModal={toggleModal} />}
+      {images.length > 0 && (
+        <ImageGallery images={images} currentPage={page} toggleModal={toggleModal} />
+      )}
       {isLoading && <Loader />}
       {total > 0 && <Button title="Load More" onClick={nextPage} />}
       {isOpenModal && (
