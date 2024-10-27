@@ -8,6 +8,7 @@ import ImageGallery from './ImageGallery/ImageGallery';
 import Button from './Button/Button';
 import Loader from './Loader/Loader';
 import Modal from './Modal/Modal';
+import ImageModal from './ImageModal/ImageModal';
 
 function App() {
   const [images, setImages] = useState<Image[]>([]);
@@ -19,6 +20,7 @@ function App() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const isFirstRender = useRef(true);
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  const [modalData, setModalData] = useState<string>('');
 
   useEffect(() => {
     if (isFirstRender.current) {
@@ -69,8 +71,9 @@ function App() {
     setPage(prev => prev + 1);
   };
 
-  const toggleModal = () => {
+  const toggleModal = (data: string) => {
     setIsOpenModal(isOpenModal => !isOpenModal);
+    setModalData(data);
   };
 
   return (
@@ -79,7 +82,11 @@ function App() {
       {images.length > 0 && <ImageGallery images={images} toggleModal={toggleModal} />}
       {isLoading && <Loader />}
       {total > 0 && <Button title="Load More" onClick={nextPage} />}
-      {isOpenModal && <Modal />}
+      {isOpenModal && (
+        <Modal>
+          <ImageModal data={modalData} />
+        </Modal>
+      )}
     </div>
   );
 }

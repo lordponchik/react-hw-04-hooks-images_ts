@@ -4,7 +4,7 @@ import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 
 interface Props {
   images: Image[];
-  toggleModal: () => void;
+  toggleModal: (modalData: string) => void;
 }
 
 export default function ImageGallery({ images, toggleModal }: Props) {

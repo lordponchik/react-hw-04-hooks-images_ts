@@ -3,7 +3,7 @@ import s from './ImageGalleryItem.module.css';
 
 interface Props {
   image: Image;
-  toggleModal: () => void;
+  toggleModal: (modalData: string) => void;
 }
 
 export default function ImageGalleryItem({
@@ -11,8 +11,8 @@ export default function ImageGalleryItem({
   toggleModal,
 }: Props) {
   return (
-    <li className={s.gallery__item} onClick={toggleModal}>
-      <img src={webformatURL} alt="" />
+    <li className={s.gallery__item} onClick={() => toggleModal(largeImageURL)}>
+      <img src={webformatURL} alt="" className={s.gallery__image} />
     </li>
   );
 }
