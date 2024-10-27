@@ -61,6 +61,15 @@ function App() {
   }, [query, page]);
 
   const onSubmit = (q: string) => {
+    if (q === '') {
+      alert('You are trying to find Nothing.');
+
+      return;
+    }
+    if (query === q) {
+      alert(`You have already found ${q}`);
+    }
+
     if (query !== q) {
       setImages([]);
       setQuery(q);
