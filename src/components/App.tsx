@@ -71,9 +71,9 @@ function App() {
     setPage(prev => prev + 1);
   };
 
-  const toggleModal = (data: string) => {
+  const toggleModal = (data?: string) => {
     setIsOpenModal(isOpenModal => !isOpenModal);
-    setModalData(data);
+    setModalData(data || '');
   };
 
   return (
