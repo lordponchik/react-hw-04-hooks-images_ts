@@ -12,6 +12,6 @@
   background-color: rgba(193, 193, 193, 0.75);
 }
 .modal {
-  width: 60%;
-  height: 60%;
+  max-height: calc(100vh - 24px);
+  max-width: calc(75vw - 48px);
 }
