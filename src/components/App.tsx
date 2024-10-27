@@ -61,7 +61,7 @@ function App() {
   }, [query, page]);
 
   const onSubmit = (q: string) => {
-    if (q === '') {
+    if (q.trim() === '') {
       alert('You are trying to find Nothing.');
 
       return;
