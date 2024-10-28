@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+<h1 id="home">Homework :clipboard:</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## react-hw-04-hooks-images_ts
 
-## Available Scripts
+- 🇺🇸 [English](#en)
+- 🇺🇦 [Ukrainian](#uk)
+- 🇷🇺 [Russian](#ru)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+<h3 id="en">📚 EN 📚</h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Acceptance criteria
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- When submitting homework, there are links: to the source files and the working page of projects on
+  `GitHub Pages`.
+- When running the task code, there are no errors or warnings in the console.
+- For each component, there is a separate folder with a React component file and a style file.
+- `interfaces` are described for components.
+- Component names are clear and descriptive.
 
-### `npm test`
+## Image search
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The `react-hw-04-hooks-images_ts` repository has been created.
+- Refactor the task code [Image search](https://github.com/lordponchik/react-hw-04-hooks-images_ts)
+  using React hooks.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h3 id="uk">📚 UK 📚 <a href="#home">⬆ Home ⬆</a></h3>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Критерії прийому
 
-### `npm run eject`
+- При здачі домашньої роботи є посилання: на вихідні файли та робочу сторінку проектів на
+  `GitHub Pages`.
+- При запуску коду завдання, в консолі немає помилок та попереджень.
+- Для кожного компонента є окрема папка з файлом React-компонента та файлом стилів.
+- Для компонентів описано `interfaces`.
+- Імена компонентів зрозумілі, описові.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Пошук зображень
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Створено репозиторій `react-hw-04-hooks-images_ts`.
+- Проведи рефакторинг коду завдання
+  [Пошук зображень](https://github.com/lordponchik/react-hw-04-hooks-images_ts) використовуючи
+  React-хуки.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+<h3 id="ru">📚 RU 📚 <a href="#home">⬆ Home ⬆</a></h3>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Критерии приема
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- При сдаче домашней работы есть ссылки: на исходные файлы и рабочую страницу проектов на
+  `GitHub Pages`.
+- При запуске кода задания, в консоли нету ошибок и предупреждений.
+- Для каждого компонента есть отдельная папка с файлом React-компонента и файлом стилей.
+- Для компонентов описаны `interfaces`.
+- Имена компонентов понятные, описательные.
+
+## Поиск изображений
+
+- Создан репозиторий `react-hw-04-hooks-images_ts`.
+- Проведи рефакторинг кода задания
+  [Поиск изображений](https://github.com/lordponchik/react-hw-04-hooks-images_ts) используя
+  React-хуки.
